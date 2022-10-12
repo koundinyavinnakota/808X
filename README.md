@@ -18,3 +18,12 @@ cmake ..
 make
 Run program: ./app/Checker
 ```
+## Steps to run the Valgrind
+```
+cd <project_directory>
+mkdir build
+cd build
+cmake ..
+make
+Run program: valgrind ./app/Checker
+```
