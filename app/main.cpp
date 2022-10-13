@@ -1,22 +1,14 @@
-/**
- * @author - Koundinya Vinnakota
- * @version - 0.1
- * @copyright - 2022 - vkd@umd.edu
- * @return int - 0, if there is no error in the code.
- */
-// #include "GradeCalculator.cpp"
-#include<iostream>
-#include <vector>
-int main() {
-   
+#include <iostream>
+#include <AnalogSensor.hpp>
 
-    std::vector<int> v { 1, 2, 3, 4, 5 };
-    v[4] = 0;
-
-    bool condition = true;
-    if (condition) {
-    // Do the thing
-    std::cout << " Hi " << std::endl;
+int main()
+{
+    AnalogSensor lightSensor(5);
+    std::cout << "Averaged sensor reading: " << lightSensor.Read() << std::endl;
+    bool terminator = true;
+    if( terminator )
+    {
+        std::cout << "DONE" << std::endl;
     }
-
+    return 0;
 }

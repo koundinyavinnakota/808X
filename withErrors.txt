@@ -1,29 +1,25 @@
-==17033== Memcheck, a memory error detector
-==17033== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==17033== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==17033== Command: ./app/Checker
-==17033== 
-==17033== Invalid write of size 4
-==17033==    at 0x10A327: main (main.cpp:14)
-==17033==  Address 0x4da8c94 is 0 bytes after a block of size 20 alloc'd
-==17033==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==17033==    by 0x10ABEF: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:114)
-==17033==    by 0x10AAD8: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:443)
-==17033==    by 0x10A921: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:343)
-==17033==    by 0x10A6F8: void std::vector<int, std::allocator<int> >::_M_range_initialize<int const*>(int const*, int const*, std::forward_iterator_tag) (stl_vector.h:1579)
-==17033==    by 0x10A4E7: std::vector<int, std::allocator<int> >::vector(std::initializer_list<int>, std::allocator<int> const&) (stl_vector.h:626)
-==17033==    by 0x10A309: main (main.cpp:13)
-==17033== 
-==17033== Conditional jump or move depends on uninitialised value(s)
-==17033==    at 0x10A331: main (main.cpp:17)
-==17033== 
-==17033== 
-==17033== HEAP SUMMARY:
-==17033==     in use at exit: 0 bytes in 0 blocks
-==17033==   total heap usage: 2 allocs, 2 frees, 72,724 bytes allocated
-==17033== 
-==17033== All heap blocks were freed -- no leaks are possible
-==17033== 
-==17033== Use --track-origins=yes to see where uninitialised values come from
-==17033== For lists of detected and suppressed errors, rerun with: -s
-==17033== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==28804== Memcheck, a memory error detector
+==28804== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==28804== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==28804== Command: ./app/shell-app
+==28804== 
+Averaged sensor reading: 10
+==28804== Conditional jump or move depends on uninitialised value(s)
+==28804==    at 0x10A31B: main (main.cpp:9)
+==28804== 
+==28804== 
+==28804== HEAP SUMMARY:
+==28804==     in use at exit: 44 bytes in 2 blocks
+==28804==   total heap usage: 4 allocs, 2 frees, 76,844 bytes allocated
+==28804== 
+==28804== LEAK SUMMARY:
+==28804==    definitely lost: 24 bytes in 1 blocks
+==28804==    indirectly lost: 20 bytes in 1 blocks
+==28804==      possibly lost: 0 bytes in 0 blocks
+==28804==    still reachable: 0 bytes in 0 blocks
+==28804==         suppressed: 0 bytes in 0 blocks
+==28804== Rerun with --leak-check=full to see details of leaked memory
+==28804== 
+==28804== Use --track-origins=yes to see where uninitialised values come from
+==28804== For lists of detected and suppressed errors, rerun with: -s
+==28804== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
