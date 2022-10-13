@@ -25,5 +25,5 @@ mkdir build
 cd build
 cmake ..
 make
-Run program: valgrind ./app/Checker
+Run program: valgrind ./app/shell-app
 ```
